@@ -18,7 +18,7 @@ public class Task9 {
         //  System.out.println("The sorted array: " + Arrays.toString(arr));
 
         HashSet<Integer> h_set = new HashSet<Integer>();
-        int ans = 0;
+        int newLength = 0;
         for (int i = 0; i < n; ++i)
             h_set.add(arr[i]);
 
@@ -28,11 +28,11 @@ public class Task9 {
                     int j = arr[i];
                     while (h_set.contains(j))
                         j++;
-                    if (ans < j - arr[i])
-                        ans = j - arr[i];
+                    if (newLength < j - arr[i])
+                        newLength = j - arr[i];
                 }
             }
-        System.out.println("The longest consecutive elements sequence is: " + ans);
+        System.out.println("The longest consecutive elements sequence is: " + newLength);
         return n;
     }
 }

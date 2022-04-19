@@ -13,13 +13,12 @@ public class Task2 {
         int max = 0;
         int input;
 
-
         do {
             System.out.println("Please enter number. Enter '0' to quit: ");
             input = scanner.nextInt();
-            if (min > input)
+            if (min < input)
                 min = input;
-            if (max < input)
+            if (max > input)
                 max = input;
 
         } while (input != 0);
